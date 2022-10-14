@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - Prints
+ * main - Prints alphabet
  *
- * retuurn: Always
+ * return: Always
  */
 int main(void)
 {
