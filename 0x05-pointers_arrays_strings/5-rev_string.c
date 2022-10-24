@@ -7,12 +7,19 @@
  * Return: Empty
  */
 void rev_string(char *s)
-int main(void)
 {
-	char s[11] = "Holberton!";
+	char rev = s[0];
+	int fcounter = 0;
+	int i;
 
-	printf("%s\n", s);
-	rev_string(s);
-	printf("%s\n", s);
-	return (0);
+	while (s[fcounter] != '\0')
+		fcounter++;
+
+	for (i = 0; i < fcounter; i++)
+	{
+		fcounter--;
+		rev = s[i];
+		s[i] = s[fcounter];
+		s[fcounter] = rev;
+	}
 }
