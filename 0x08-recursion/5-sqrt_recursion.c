@@ -3,7 +3,7 @@
 
 /**
  * _sqrt - Calculates natural square root
- * _sqrt_recursion - Returns natural square root
+ * _sqrt_recursion: Returns natural square root
  * @n: number
  * @i: iternate
  *
@@ -21,6 +21,9 @@ int _sqrt(int n, int i)
 
 	return (_sqrt(n, i + 1));
 }
+/**
+ * _sqrt_recursion - Return natural square root
+ */
 int _sqrt_recursion(int n)
 {
 	return (_sqrt(n, 1));
