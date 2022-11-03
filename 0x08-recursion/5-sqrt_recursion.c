@@ -3,6 +3,7 @@
 
 /**
  * _sqrt - Calculates natural square root
+ * _sqrt_recursion - Returns natural square root
  * @n: number
  * @i: iternate
  *
