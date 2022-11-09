@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * strdup - Duplicate string
+ * _strdup - Duplicate string
  * @str: string
  *
  * Return: String
@@ -39,7 +39,7 @@ char *_strdup(char *str)
 #include <stdlib.h>
 
 /**
- * strdup - Duplicate string
+ * _strdup - Duplicate string
  * @str: string
  *
  * Return: String
@@ -76,7 +76,7 @@ char *_strdup(char *str)
 #include <stdlib.h>
 
 /**
- * strdup - Duplicate string
+ * _strdup - Duplicate string
  * @str: string
  *
  * Return: String
