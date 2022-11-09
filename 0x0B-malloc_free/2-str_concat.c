@@ -5,153 +5,38 @@
 /**
  * str_concat - Concatenates
  * @s1: string1
- * @s2: strin2
+ * @s2: string2
  *
  * Return: Strings
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, j = 0, k = 0, l = 0;
-	char *s;
+	char *strnew = NULL;
+	unsigned int i;
+	int n1;
+	int n2;
+	int count;
 
+	count = 0;
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
-
-	while (s1[i])
-		i++;
-
-	while (s2[j])
-		j++;
-
-	l = i + j;
-	s = malloc((sizeof(char) * l) + 1);
-
-	if (s == NULL)
-		return (NULL);
-
-	j = 0;
-
-	while (k < l)
+	for (n1 = 0; s1[n1] != '\0'; n1++)
+		;
+	for (n2 = 0; s2[n2] != '\0'; n2++)
+		;
+	strnew = (char *)malloc((n1 + n2 + 1) * sizeof(char));
+	if (strnew == NULL)
 	{
-		if (k <= i)
-			s[k] = s1[k];
-
-		if (k >= i)
-		{
-			s[k] = s2[j];
-			j++;
-		}
-
-		k++;
-	}
-
-	s[k] = '\0';
-	return (s);
-}#include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-/**
- * str_concat - Concatenates
- * @s1: string1
- * @s2: strin2
- *
- * Return: Strings
- */
-char *str_concat(char *s1, char *s2)
-{
-	int i = 0, j = 0, k = 0, l = 0;
-	char *s;
-
-	if (s1 == NULL)
-		s1 = "";
-
-	if (s2 == NULL)
-		s2 = "";
-
-	while (s1[i])
-		i++;
-
-	while (s2[j])
-		j++;
-
-	l = i + j;
-	s = malloc((sizeof(char) * l) + 1);
-
-	if (s == NULL)
 		return (NULL);
-
-	j = 0;
-
-	while (k < l)
-	{
-		if (k <= i)
-			s[k] = s1[k];
-
-		if (k >= i)
-		{
-			s[k] = s2[j];
-			j++;
-		}
-
-		k++;
 	}
-
-	s[k] = '\0';
-	return (s);
-}#include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-/**
- * str_concat - Concatenates
- * @s1: string1
- * @s2: strin2
- *
- * Return: Strings
- */
-char *str_concat(char *s1, char *s2)
-{
-	int i = 0, j = 0, k = 0, l = 0;
-	char *s;
-
-	if (s1 == NULL)
-		s1 = "";
-
-	if (s2 == NULL)
-		s2 = "";
-
-	while (s1[i])
-		i++;
-
-	while (s2[j])
-		j++;
-
-	l = i + j;
-	s = malloc((sizeof(char) * l) + 1);
-
-	if (s == NULL)
-		return (NULL);
-
-	j = 0;
-
-	while (k < l)
+	for (i = 0; s1[i] != '\0'; i++)
+		strnew[i] = s1[i];
+	for (; s2[count] != '\0'; i++)
 	{
-		if (k <= i)
-			s[k] = s1[k];
-
-		if (k >= i)
-		{
-			s[k] = s2[j];
-			j++;
-		}
-
-		k++;
+		strnew[i] = s2[count];
+		count++;
 	}
-
-	s[k] = '\0';
-	return (s);
+	return (strnew);
 }
