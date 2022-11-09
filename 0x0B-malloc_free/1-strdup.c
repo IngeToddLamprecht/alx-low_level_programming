@@ -34,7 +34,8 @@ char *_strdup(char *str)
 
 	s[a] = '\0';
 	return (s);
-}#include "main.h"
+}
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -70,7 +71,8 @@ char *_strdup(char *str)
 
 	s[a] = '\0';
 	return (s);
-}#include "main.h"
+}
+#include "main.h"
 #include <stdlib.h>
 
 /**
