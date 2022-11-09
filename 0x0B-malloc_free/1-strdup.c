@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -7,105 +8,26 @@
  *
  * Return: String
  */
-
 char *_strdup(char *str)
 {
-	int a = 0, i = 1;
-	char *s;
+	char *strnew = NULL;
+	unsigned int i;
+	int n;
 
 	if (str == NULL)
 		return (NULL);
-
-	while (str[i])
+	for (n = 0; str[n] != '\0'; n++)
+		;
+	strnew = (char *)malloc(n + 1 * sizeof(char));
+	if (strnew != NULL)
 	{
-		i++;
+		for (i = 0; str[i] != '\0'; i++)
+			strnew[i] = str[i];
 	}
-
-	s = malloc((sizeof(char) * i) + 1);
-
-	if (s == NULL)
+	else
+	{
 		return (NULL);
-
-	while (a < i)
-	{
-		s[a] = str[a];
-		a++;
 	}
-
-	s[a] = '\0';
-	return (s);
-}
-#include "main.h"
-#include <stdlib.h>
-
-/**
- * _strdup - Duplicate string
- * @str: string
- *
- * Return: String
- */
-
-char *_strdup(char *str)
-{
-	int a = 0, i = 1;
-	char *s;
-
-	if (str == NULL)
-		return (NULL);
-
-	while (str[i])
-	{
-		i++;
-	}
-
-	s = malloc((sizeof(char) * i) + 1);
-
-	if (s == NULL)
-		return (NULL);
-
-	while (a < i)
-	{
-		s[a] = str[a];
-		a++;
-	}
-
-	s[a] = '\0';
-	return (s);
-}
-#include "main.h"
-#include <stdlib.h>
-
-/**
- * _strdup - Duplicate string
- * @str: string
- *
- * Return: String
- */
-
-char *_strdup(char *str)
-{
-	int a = 0, i = 1;
-	char *s;
-
-	if (str == NULL)
-		return (NULL);
-
-	while (str[i])
-	{
-		i++;
-	}
-
-	s = malloc((sizeof(char) * i) + 1);
-
-	if (s == NULL)
-		return (NULL);
-
-	while (a < i)
-	{
-		s[a] = str[a];
-		a++;
-	}
-
-	s[a] = '\0';
-	return (s);
+	strnew[i] = '\0';
+	return (strnew);
 }
